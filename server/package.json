@@ -1,24 +1,21 @@
 {
-  "name": "ChatApp",
+  "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Marcus4420/ChatApp.git"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Marcus4420/ChatApp/issues"
-  },
-  "homepage": "https://github.com/Marcus4420/ChatApp#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
