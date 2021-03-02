@@ -4,13 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat APP</title>
+    <title>SlotsFeed 🏰</title>
     <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
 </head>
 <body>
     <header>
-        <h1>Velkommen til min vhat app</h1>
+        <h1 class="title">Velkommen til SlotsFeed 🏰</h1>
     </header>
-    
+    <main>
+        <form class="user-form">
+            <label for="name">NAME</label>
+            <input class="u-full-width" type"text" id="name" name="name">
+            <label for="message">MESSAGE</label>
+            <input class="u-full-width" type"text" id="content" name="content">
+            <button class="button-primary">Send your message</button>
+        </form>
+        <div class="loading">
+            <img src="LoadSlot.gif" alt="loading-gif">
+        </div>
+    </main>
+    <script src="client.js"> </script>
 </body>
 </html>
