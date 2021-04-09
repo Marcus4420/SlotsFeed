@@ -4,10 +4,11 @@ const cors  = require('cors');
 const monk = require('monk');
 const path = require('path');
 const Filter = require('bad-words');
+const uri = process.env.MONGODB_URI;
 
 
 const app = express();
-const db = monk(process.env.MONGO_URI || 'localhost/slotsfeed');
+const db = monk(uri || 'localhost/slotsfeed');
 const msgs = db.get('msgs');
 const filter = new Filter();
 
