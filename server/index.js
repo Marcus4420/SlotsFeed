@@ -2,7 +2,9 @@ const port = process.env.PORT || 5000;
 const express = require('express');
 const cors  = require('cors');
 const monk = require('monk');
+const path = require('path');
 const Filter = require('bad-words');
+
 
 const app = express();
 const db = monk(process.env.MONGO_URI || 'localhost/slotsfeed');
@@ -15,9 +17,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    res.json({
-        message: 'Slotshaven Feed 🏰'
-    })
+    res.sendFile(path.join(__dirname+'../index.html'));
 })
 
 app.get('/slotsfeed', (req, res) => {
