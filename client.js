@@ -2,7 +2,10 @@ console.log("Client is loaded");
 
 const form = document.querySelector('form');
 const loadingElement = document.querySelector('.loading');
-const API_URL = 'http://localhost:5000/messages';
+const msgsElement = document.querySelector('.msgs')
+const API_URL = 'http://localhost:5000/slotsfeed';
+
+listAllMessages();
 
 loadingElement.style.display = 'none'
 
@@ -12,6 +15,7 @@ form.addEventListener('submit', (event) => {
     const formData = new FormData(form);
     const name = formData.get('name');
     const content = formData.get('content');
+
     const msg = {
         name,
         content
@@ -26,5 +30,36 @@ form.addEventListener('submit', (event) => {
         headers: {
             'content-type': 'application/json'
         }
-    });
+    }).then(response => response.json())
+    .then(createdMsg => {
+        console.log(createdMsg);
+        form.reset();
+        form.style.display = '';
+        loadingElement.style.display = 'none';
+        listAllMessages();
+    })
 });
+
+
+function listAllMessages() {
+    msgsElement.innerHTML = '';
+    fetch(API_URL)
+        .then(response => response.json())
+        .then(msgs => {
+            msgs.reverse();
+            msgs.forEach(msg => {
+                const div = document.createElement('div');
+                const header = document.createElement('h3');
+                header.textContent = msg.name;
+                const contents = document.createElement('p');
+                contents.textContent = msg.content;
+                const date = document.createElement('small');
+                date.textContent = new Date(msg.created);
+                div.appendChild(header);
+                div.appendChild(contents);
+                div.appendChild(date)
+
+                msgsElement.appendChild(div);
+            })
+        });
+}

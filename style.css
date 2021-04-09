@@ -4,7 +4,7 @@
 }
 
 .user-form, .loading {
-    width: 50%;
+    width: 20%;
     margin: 0 auto
 }
 
@@ -12,3 +12,7 @@
     text-align: center;
 }
 
+.msgs {
+    width: 90%;
+    margin: 0 auto;
+}
