@@ -3,7 +3,7 @@ console.log("Client is loaded");
 const form = document.querySelector('form');
 const loadingElement = document.querySelector('.loading');
 const msgsElement = document.querySelector('.msgs')
-const API_URL = 'http://localhost:5000/slotsfeed';
+const API_URL = 'https://slotsfeed.herokuapp.com/slotsfeed';
 
 listAllMessages();
 
