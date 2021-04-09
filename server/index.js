@@ -1,14 +1,14 @@
 const port = process.env.PORT || 5000;
 const express = require('express');
 const cors  = require('cors');
-const MongoClient = require('mongodb').MongoClient;
+const monk = require('monk');
 const path = require('path');
 const Filter = require('bad-words');
-const uri = "mongodb+srv://Heroku:Arduino123@mychatapp.jfwjt.mongodb.net/MyChatApp?retryWrites=true&w=majority";
+
 
 
 const app = express();
-const db = monk(uri || 'localhost/slotsfeed');
+const db = monk(process.env.MONGO_URI || 'localhost/slotsfeed');
 const msgs = db.get('msgs');
 const filter = new Filter();
 
