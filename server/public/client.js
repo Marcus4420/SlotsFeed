@@ -3,7 +3,7 @@ console.log("Client is loaded");
 const form = document.querySelector('form');
 const loadingElement = document.querySelector('.loading');
 const msgsElement = document.querySelector('.msgs')
-const API_URL = process.env.API_URL || 'http://localhost:5000/slotsfeed';
+const API_URL = 'http://localhost:5000/slotsfeed' || 'https://slotsfeed.herokuapp.com/slotsfeed';
 
 listAllMessages();
 
@@ -58,6 +58,11 @@ function listAllMessages() {
                 div.appendChild(header);
                 div.appendChild(contents);
                 div.appendChild(date)
+                div.style.border = 'Solid';
+                div.style.margin = '2%';
+                div.style.padding = '1%';
+                div.style.display = 'block';
+
 
                 msgsElement.appendChild(div);
             })

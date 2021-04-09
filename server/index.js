@@ -32,11 +32,11 @@ app.get('/slotsfeed', (req, res) => {
 })
 
 function isValidMsg(msg) {
-    return msg.name && msg.name.toString().trim() != '' && msg.content && msg.content .toString().trim() != '' 
+    return msg.name && msg.name.toString().trim() != '' && msg.content && msg.content .toString().trim() != ''
 }
 
 app.post('/slotsfeed', (req, res) => {
-    if (isValidMsg(req.body)) {
+    if (isValidMsg(req.body) && req.content > 101) {
     //Indsæt i database
     const msg = {
         name: filter.clean(req.body.name.toString()),

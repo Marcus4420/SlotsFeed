@@ -1,11 +1,12 @@
 .title {
-    text-align: center;
-    color: orangered;
+    text-align: left;
+    color: black;
+    margin-left: 3%;
 }
 
 .user-form, .loading {
     width: 20%;
-    margin: 0 auto
+    margin-left: 3%;
 }
 
 .loading {
@@ -13,6 +14,19 @@
 }
 
 .msgs {
-    width: 90%;
-    margin: 0 auto;
+    width: 70%;
+    margin-left: 2%;
+}
+
+.Foot {
+    margin-top: 50px;
+}
+
+.Foot small {
+    margin-left: 5%;
+    color: black;
+    border: thin;
+    border-color: black;
+    border-style:solid;
+    padding: 20px;
 }
