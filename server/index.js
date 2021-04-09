@@ -1,3 +1,4 @@
+const port = process.env.PORT || 5000;
 const express = require('express');
 const cors  = require('cors');
 const monk = require('monk');
@@ -53,6 +54,6 @@ app.post('/slotsfeed', (req, res) => {
 }
 });
 
-app.listen(5000, () => {
+app.listen(port, () => {
     console.log('Listening on http://localhost:5000');
 })
