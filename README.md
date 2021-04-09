@@ -10,16 +10,16 @@ Features som:
 ## Mine mål
 
 * [ ] 📝 Diagram af Full Stack
-* [ ] 🔎 Hold Client og Server hver for sig
-* [ ] ⌨️ Få bruger input direkte på siden
-* [ ] ➡️ Send brugernes input til database
-* [ ] 🗃 Opbevar dataen i databass
-* [ ] 🔍 Modtag dataen fra en database til serveren
-* [ ] ⬅️ Modtag dataen fra server til klientens side
-* [ ] 🙈 Gem loading buffer - når load er done
-* [ ] 🚀 Deploy clienten med Heroku
-* [ ] 🚀 Deploy database med MongoDB & Monk
-* [ ] 🚀 Deploy serveren med Heroku
+* [x] 🔎 Hold Client og Server hver for sig
+* [x] ⌨️ Få bruger input direkte på siden
+* [x] ➡️ Send brugernes input til database
+* [x] 🗃 Opbevar dataen i database
+* [x] 🔍 Modtag dataen fra en database til serveren
+* [x]] ⬅️ Modtag dataen fra server til klientens side
+* [x] 🙈 Gem loading buffer - når load er done
+* [x] 🚀 Deploy clienten med Heroku
+* [x] 🚀 Deploy database med MongoDB & Monk
+* [x] 🚀 Deploy serveren med Heroku
 
 ## Front-end
 
