@@ -4,6 +4,7 @@ const cors  = require('cors');
 const monk = require('monk');
 const path = require('path');
 const Filter = require('bad-words');
+//uri
 const uri = process.env.MONGODB_URI;
 
 
