@@ -15,7 +15,7 @@ Features som:
 * [x] ➡️ Send brugernes input til database
 * [x] 🗃 Opbevar dataen i database
 * [x] 🔍 Modtag dataen fra en database til serveren
-* [x]] ⬅️ Modtag dataen fra server til klientens side
+* [x] ⬅️ Modtag dataen fra server til klientens side
 * [x] 🙈 Gem loading buffer - når load er done
 * [x] 🚀 Deploy clienten med Heroku
 * [x] 🚀 Deploy database med MongoDB & Monk
