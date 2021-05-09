@@ -32,7 +32,7 @@ app.get('/slotsfeed', (req, res) => {
 })
 
 function isValidMsg(msg) {
-    return msg.name && msg.name.toString().trim() != '' && msg.content && msg.content .toString().trim() != '' 
+    return msg.name && msg.name.toString().trim() != '' && msg.content && msg.content.toString().trim() != '' 
 }
 
 app.post('/slotsfeed', (req, res) => {
