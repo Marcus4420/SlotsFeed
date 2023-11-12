@@ -8,7 +8,7 @@ const loadingElement = document.querySelector('.loading');
 //Samme som ovennævnte
 const msgsElement = document.querySelector('.msgs')
 //Vores 'API URL' som er linket til den deployede side, på /slotsfeed
-const API_URL = 'https://slotsfeed.herokuapp.com/slotsfeed';
+const API_URL = 'http://localhost:5000/slotsfeed';
 
 //Kalder funktionen der skaffer alle nuværende beskeder. (Findes i client.js)
 listAllMessages();

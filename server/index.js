@@ -11,17 +11,18 @@ const path = require('path');
 //Language filter.. for min egen skyld :)
 const Filter = require('bad-words');
 //URI fra hosten, til vores dejlige mongoDB datbase.
-const uri = process.env.MONGODB_URI;
+const uri = "mongodb+srv://MarcusElle:ellested34@slotsfeed.jfwjt.mongodb.net/?retryWrites=true&w=majority";
 
 //Initialiserer end masse af det vi lige sagde ovenover
 const app = express();
 const db = monk(uri || 'localhost/slotsfeed');
-const msgs = db.get('msgs');
+const msgs = db.get('slotsfeed');
 const filter = new Filter();
 
 
 //Samme som ovennævnte
 app.use(cors());
+app.options('*', cors());
 app.use(express.json());
 app.use(express.static(__dirname+'/public'));
 
